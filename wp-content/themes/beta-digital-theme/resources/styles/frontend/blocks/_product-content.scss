@@ -1,0 +1,48 @@
+.wp-block-beta-digital-block-product-content {
+    margin: 3rem 0;
+}
+.bd-block-product {
+    &__content {
+        padding: 3rem 0;
+        margin: 0;
+        position: relative;
+
+        @include min-lg {
+            display: grid;
+            grid-template-columns: 40% auto;
+            grid-column-gap: 2rem;
+        }
+
+        &::before {
+            content: '';
+            height: 1px;
+            background-color: $grey;
+            position: absolute;
+            display: block;
+            transform: translateX(-50%);
+            left: 50%;
+            top: 0;
+
+            @include max-lg {
+                width: 100vw;
+            }
+            @include min-lg {
+                width: calc(100% + 60px);
+            }
+        }
+    }
+
+    &__content-title {
+        font-weight: 500;
+        @include fluid-size(font-size, 24px, 32px);
+
+        @include max-lg {
+            margin: 0 0 2rem;
+            padding: 0;
+        }
+        @include min-lg {
+            margin: 2rem 0;
+            padding: initial;
+        }
+    }
+}

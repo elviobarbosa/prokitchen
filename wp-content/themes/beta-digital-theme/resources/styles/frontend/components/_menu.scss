@@ -1,0 +1,87 @@
+.nav {
+	&__menu {
+		display: none;
+	}
+
+	&__h-menu {
+		z-index: 1;
+		position: relative;
+	}
+
+	&__control {
+		position: relative;
+		
+		span {
+			@include fluid-size(width, 35px, 70px);
+			@include fluid-size(height, 3px, 5px);
+			background-color: white;
+			display: block;
+			transition: all 0.3s ease-out;
+
+			&:not(:last-child) {
+				@include fluid-size(margin-bottom, 3px, 5px);
+			}
+
+			&:first-of-type {
+				margin-right: 1rem;
+			}
+
+			&:last-of-type {
+				margin-left: 1rem;
+			}
+		}
+	}
+
+	&__toggle-menu {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		z-index: 2;
+		opacity: 0;
+		
+		&:checked ~ .nav__h-menu span:first-of-type {
+			margin-right: 0;
+			transition: all 0.3s ease-out;
+			margin-bottom: 0;
+			transform: rotate(45deg);
+		}
+
+		&:checked ~ .nav__h-menu span:last-of-type {
+			margin-left: 0;
+			transition: all 0.3s ease-out;
+			transform: rotate(-45deg);
+			@include fluid-size(margin-top, -3px, -5px);
+		}
+
+		&:checked ~ nav.menu {
+			left: 0;
+			transition: all 0.5s ease-in-out;
+			background-color: $primary-color;
+		}
+	}
+}
+
+nav.menu {
+	display: flex;
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	transition: all 0.5s ease-in-out;
+	position: fixed;
+	background-color: $secondary-color;
+	align-items: center;
+
+	ul {
+		padding: 10%;
+		margin: 0;
+		width: 100%;
+
+		a {
+			color: white;
+			text-decoration: none;
+			@include fluid-size(font-size, 20px, 60px);
+		}
+	}
+}

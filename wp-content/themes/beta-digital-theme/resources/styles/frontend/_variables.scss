@@ -1,0 +1,31 @@
+$primary-color: #07132F;
+$secondary-color: #467EBE;
+$gray-light: #CBCED4;
+$dark: #000;
+$grey: #3d475d;
+
+$theme-colors: (
+  "primary-color":$primary-color,
+  "secundary-color": $secondary-color,
+  "gray-light": $gray-light,
+  "dark": $dark,
+  "grey": $grey,
+);
+
+$imgpath: "../../images";
+
+$variable-prefix: '';
+
+// BREAKPOINTS
+
+$screen-xs-min: 375px;
+$screen-sm-min: 576px;
+$screen-md-min: 768px;
+$screen-lg-min: 992px;
+$screen-xl-min: 1200px;
+$screen-xxl-min: 1366px;
+$screen-xxxl-min: 1440px;
+$screen-xxxxl-min: 1600px;
+
+$max-vw: 1366px;
+$min-vw: 375px;

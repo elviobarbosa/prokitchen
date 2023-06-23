@@ -1,0 +1,26 @@
+.archive-products {
+    &__grid {
+        display: grid;
+        column-gap: 3rem;
+
+        @include between-breakpoints($screen-md-min, $screen-xxxl-min) {
+            grid-template-columns: repeat(auto-fill, minmax(45%, 1fr));
+        }
+
+        @include min-xxxl {
+            grid-template-columns: repeat(auto-fill, minmax(482px, 1fr));
+        }
+    }
+
+    &__category-name {
+        @include fluid-size(font-size, 24px, 32px);
+        font-weight: normal;
+    }
+}
+
+.single-products {
+    &__desktop {
+        display: grid;
+        grid-template-columns: 30rem auto;
+    }
+}

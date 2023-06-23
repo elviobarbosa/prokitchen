@@ -1,0 +1,31 @@
+.btn {
+  text-decoration: none;
+  border: none;
+  padding-block: 0.8rem;
+  padding-inline: 2.5rem;
+  @include border-radius(60px);
+  transition: all 0.3s ease;
+
+  &:focus {
+    outline: 0;
+  }
+
+  &:hover {
+    filter: brightness(0.9);    
+  }
+
+  &--primary {
+    color: white;
+    background-color: $primary-color;
+  }
+
+  &--secondary {
+    color: white;
+    background-color: $secondary-color;
+  }
+
+  &:disabled {
+    opacity: .5;
+  }
+}
+

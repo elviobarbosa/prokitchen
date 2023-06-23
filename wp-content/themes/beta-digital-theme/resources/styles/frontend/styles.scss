@@ -1,0 +1,19 @@
+@import "./variables";
+@import "./mixins/index";
+@import "./colors";
+@import "./typography";
+@import "./functions";
+
+// placeholders
+@import "./placeholders/index";
+
+@import "./generic/index";
+
+//blocks
+@import "./blocks/index";
+
+//components
+@import "./components/index";
+
+// pages
+@import "./pages/index";

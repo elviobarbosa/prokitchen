@@ -1,0 +1,37 @@
+%body_text {
+
+    @include max-md {
+        font-size: 1.4rem;
+        line-height: 1.6em;
+    }
+
+    @include min-md {
+        font-size: 1.6rem;
+        line-height: 2em;
+    }
+}
+
+%page-title {
+    padding: 0;
+    margin: 0;
+    font-weight: 700;
+
+    @include max-md {
+        font-size: 3rem;
+        line-height: 4.2rem;
+    }
+
+    @include min-md {
+        font-size: 4.4rem;
+        line-height: 5.6rem;
+    }
+}
+
+%gradient-text {
+    background-image: linear-gradient(45deg, #467EBE, #9FFFC8);
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.5s;
+}

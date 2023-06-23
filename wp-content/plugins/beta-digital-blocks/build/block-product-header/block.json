@@ -1,0 +1,29 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "beta-digital/block-product-header",
+  "version": "0.1.0",
+  "title": "Cabeçalho do Produto",
+  "category": "beta-digital-category",
+  "icon": "slides",
+  "description": "Cabeçalho do Produto",
+  "supports": {
+    "html": false
+  },
+  "textdomain": "bd-block-product-header",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "prodHeaderDescription": {
+      "type": "string",
+      "source": "text",
+      "selector": ".bd-block-product-header__description"
+    },
+    "prodHeaderCategories": {
+      "type": "string",
+      "source": "html",
+      "selector": ".bd-block-product-header__categories"
+    }
+  }
+}

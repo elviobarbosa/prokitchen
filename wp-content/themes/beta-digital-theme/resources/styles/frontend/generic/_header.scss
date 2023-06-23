@@ -1,0 +1,31 @@
+.header {
+    padding: 0.5rem 2rem;
+    width: 100%;
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    border-bottom: 1px solid $grey;
+    z-index: 99;
+    background-color: $primary-color;
+
+    &__logo {
+        @include fluid-size(width, 150px, 253px);
+        z-index: 1;
+
+        svg {
+            width: 100%;
+        }
+    }
+
+    &__container {
+		position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+	}
+
+    &__head {
+        display: flex;
+        align-items: center;
+    }
+}

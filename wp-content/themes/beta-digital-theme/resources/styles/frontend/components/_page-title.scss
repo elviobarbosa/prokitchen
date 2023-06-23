@@ -1,0 +1,36 @@
+.page-title {
+    font-weight: 500;
+    padding: 0.5rem 2rem;
+    margin: 0;
+    @include fluid-size (font-size, 16px, 32px);
+
+    @include max-lg {
+        border-bottom: 1px solid $grey;
+    }
+
+    &__mobile {
+        @include min-lg {
+            display: none;
+        }
+    }
+
+    &__desktop {
+        display: flex;
+        align-items: center;
+        margin-left: 6px;
+        text-indent: 30px;
+
+        &::before {
+            content: "";
+            width: 1px;
+            background-color: #3d475d;
+            height: 31px;
+            position: relative;
+            display: inline-block;
+        }
+
+        @include max-lg {
+            display: none;
+        }
+    }
+}

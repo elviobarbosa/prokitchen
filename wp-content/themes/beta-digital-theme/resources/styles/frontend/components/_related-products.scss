@@ -1,0 +1,12 @@
+.c-products-related {
+    padding: 3rem;
+    box-sizing: border-box;
+    background-color: #CBCED4;
+    margin-top: 5rem;
+
+    &__title {
+        @include fluid-size(font-size, 20px, 40px);
+        font-weight: normal;
+        color: $dark;
+    }
+}

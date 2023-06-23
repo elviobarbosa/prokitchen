@@ -1,0 +1,18 @@
+.bd-block-product-header {
+
+    @include max-md {
+        display: flex;
+        flex-direction: column-reverse;
+        margin-bottom: 5rem;
+    }
+
+    &__description {
+        font-size: 1.8rem;
+    }
+
+    &__categories {
+        strong {
+            color: $secondary-color;
+        }
+    }
+}

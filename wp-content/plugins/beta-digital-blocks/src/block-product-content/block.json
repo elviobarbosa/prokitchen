@@ -1,0 +1,23 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "beta-digital/block-product-content",
+	"version": "0.1.0",
+	"title": "Conteúdo do produto",
+	"category": "beta-digital-category",
+	"icon": "slides",
+	"description": "Bloco padronizado para inserir o conteúdo do produto com colunas",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "bd-block-product-content",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"prodContentTitle": {
+			"type": "string",
+			"source": "text"
+		}
+	}
+}
