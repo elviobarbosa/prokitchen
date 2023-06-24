@@ -1,0 +1,30 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "beta-digital/block-title-subtitle",
+  "version": "0.1.0",
+  "title": "Título e subtítulo",
+  "category": "beta-digital-category",
+  "icon": "heading",
+  "description": "Bloco para títulos e subtítulos das páginas",
+  "supports": {
+    "html": true,
+    "align": true
+  },
+  "textdomain": "bd-block-title-subtitle",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css",
+  "attributes": {
+    "contentTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "h2"
+    },
+    "contentSubTitle": {
+      "type": "string",
+      "source": "html",
+      "selector": "h3"
+    }
+  }
+}

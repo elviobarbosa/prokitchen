@@ -1,0 +1,43 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import './styles/image-prop';
+
+.wp-block-create-block-category-image {
+	position: relative;
+
+	.textbox-container {
+		&::after {
+			content: '';
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			z-index: 1;
+			pointer-events: none;
+			left: 0;
+			background: rgb(0,0,0);
+			background: -moz-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+			background: -webkit-linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+			background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(0,0,0,0) 50%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#000000",endColorstr="#000000",GradientType=1);
+		}
+		p {
+			position: absolute;
+			bottom: 20px;
+			left: 20px;
+			color: white;
+			z-index: 2;
+			text-align: center;
+		}
+	}
+
+
+	.bd-product {
+		&__categories-image {
+			@include image-proportional(378, 402)
+		}
+	}
+}

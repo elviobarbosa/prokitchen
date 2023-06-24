@@ -35,8 +35,8 @@ add_filter( 'block_categories_all' , function( $categories ) {
 function create_block_beta_digital_blocks_block_init() {
 	register_block_type( __DIR__ . '/build/block-product-content' );
 	register_block_type( __DIR__ . '/build/block-product-header' );
-	register_block_type( __DIR__ . '/build/block-gallery' );
-	register_block_type( __DIR__ . '/build/block-social-media' );
+	register_block_type( __DIR__ . '/build/block-title-subtitle' );
+	register_block_type( __DIR__ . '/build/block-category-image' );
 }
 add_action( 'init', 'create_block_beta_digital_blocks_block_init' );
 

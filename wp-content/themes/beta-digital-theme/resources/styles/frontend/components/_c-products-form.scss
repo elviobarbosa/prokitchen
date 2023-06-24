@@ -20,6 +20,26 @@
         padding: 0rem 3rem;
     }
 
+    &__close-btn {
+        appearance: none;
+        font-size: 1.6rem;
+        color: white;
+        border: none;
+        background-color: transparent;
+    }
+
+    &__close-ctn {
+        text-align: center;
+    }
+
+    .c-products-form__container {
+        p:last-of-type {
+            line-height: 0;
+            padding: 0;
+            margin: 0;
+        }
+    }
+
     label {
         color: $grey;
         font-size: 1.6rem;
@@ -41,4 +61,28 @@
         right: 0;
         transition: all 0.5s ease-in-out;
     }
+
+    .wpcf7-spinner {
+        transform: translateY(-42px);
+    }
+
+    .wpcf7-not-valid-tip {
+        font-size: 1.2rem;
+    }
+    .wpcf7-response-output {
+        margin: 0!important;
+        padding: 0!important;
+        text-align: center;
+        border: 0!important;
+        color: $primary-color;
+    }
+
+    .invalid .wpcf7-response-output {
+        color: red;
+    }
+
+    .wpcf7-textarea {
+        height: 150px;
+    }
+    
 }

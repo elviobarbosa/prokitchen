@@ -2,7 +2,7 @@
 <html>
 <head>
 	<?php
-	if('post_empreendimentos' != get_post_type() ){
+	if( get_post_type() != 'post_produtos'  ){
 		add_action( 'wpcf7_enqueue_styles', function() { wp_deregister_style( 'contact-form-7' ); } );
 		add_action( 'wpcf7_enqueue_scripts', function() { wp_deregister_script( 'jquery-form' ); } );
 		add_action( 'wpcf7_enqueue_scripts', function() { wp_deregister_script( 'contact-form-7' ); } );

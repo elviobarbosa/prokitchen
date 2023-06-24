@@ -4,7 +4,7 @@ get_header();
 ?>
 
 <main id="front-page" <?php post_class() ?>>
-    <?php get_template_part('template-parts/home/hero'); ?>
+    <?php the_content() ?>
 </main>
  
 <?php

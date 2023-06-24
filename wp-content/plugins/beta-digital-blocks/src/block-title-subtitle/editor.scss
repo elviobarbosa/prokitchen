@@ -1,0 +1,32 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+
+ [data-align=right] {
+	.wp-block-beta-digital-block-title-subtitle {
+		float: none;
+		margin: 0;
+	}
+	.beta-digital-page-titles {
+		text-align: right;
+	}
+ }
+
+ [data-align=center] {
+	.wp-block-beta-digital-block-title-subtitle {
+		float: none;
+		margin: 0;
+	}
+	.beta-digital-page-titles {
+		text-align: center;
+	}
+ }
+
+ .beta-digital-page-titles {
+	&__subtitle {
+		text-transform: uppercase;
+	}
+}
+

@@ -1,33 +1,42 @@
 {
   "$schema": "https://schemas.wp.org/trunk/block.json",
   "apiVersion": 2,
-  "name": "create-block/wide-image",
+  "name": "create-block/category-image",
   "version": "0.1.0",
-  "title": "Header Cover",
-  "category": "custom",
+  "title": "Imagem destacada - categoria",
+  "category": "beta-digital-category",
   "icon": "smiley",
-  "description": "Vamos criar blocos",
+  "description": "Insira no carrossel de categoria de produtos",
   "supports": {
     "html": false
   },
-  "textdomain": "wide-image",
+  "textdomain": "category-image",
   "editorScript": "file:./index.js",
   "editorStyle": "file:./index.css",
   "style": "file:./style-index.css",
   "attributes": {
-    "content": {
-      "type": "string",
-      "source": "html",
-      "selector": "p"
+    "categoryLink": {
+      "type": "string"
     },
-    "message": {
+    "categoryName": {
       "type": "string",
       "source": "text",
-      "selector": "div",
-      "default": ""
+      "selector": "p"
     },
     "imageUrl": {
       "type": "string"
+    },
+    "imageWidth": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "width"
+    },
+    "imageHeight": {
+      "type": "string",
+      "source": "attribute",
+      "selector": "img",
+      "attribute": "height"
     },
     "imageId": {
       "type": "number"

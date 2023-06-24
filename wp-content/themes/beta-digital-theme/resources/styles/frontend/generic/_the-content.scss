@@ -42,6 +42,13 @@ article {
         }
     }
 
+    .wp-block-embed {
+        max-width: 80%;
+        margin: 0 auto;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    
     .wp-block-image {
         @include border-radius(2rem);
         overflow: hidden;

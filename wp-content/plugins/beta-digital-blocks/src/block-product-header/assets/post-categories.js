@@ -71,7 +71,7 @@ const ProductCategories = ( useBlockProps ) => {
          ids: select( 'core/editor' ).getEditedPostAttribute( 'prod_category' ),
       };
    } );
-	console.log(postCategories)
+
    // Verifica se as categorias estão carregadas e se o post possui categorias
    if ( categories && postCategories && typeof postCategories.ids !== 'undefined') {
 

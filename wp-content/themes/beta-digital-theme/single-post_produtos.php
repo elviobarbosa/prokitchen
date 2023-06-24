@@ -1,6 +1,8 @@
 <?php
 get_header();
 $desktop = ( !wp_is_mobile() ) ? 'single-products__desktop' : '';
+get_template_part('template-parts/components/cta');
+get_template_part('template-parts/products/contact');
 while ( have_posts() ) : the_post();
     ?>
     <main <?php post_class('single-products ' . $desktop) ?>>
