@@ -259,8 +259,11 @@ function save(_ref) {
   return (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", (0,_babel_runtime_helpers_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({}, blockProps, {
     className: "bd-block-img-category"
   }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("a", {
-    href: attributes.categoryLink
-  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("p", null, attributes.categoryName), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("div", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
+    href: attributes.categoryLink,
+    className: "bd-block-img-category__link"
+  }), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("p", {
+    className: "bd-block-img-category__name"
+  }, attributes.categoryName), (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("figure", null, (0,_wordpress_element__WEBPACK_IMPORTED_MODULE_1__.createElement)("img", {
     src: attributes.imageUrl,
     alt: attributes.imageAlt,
     width: attributes.imageWidth,

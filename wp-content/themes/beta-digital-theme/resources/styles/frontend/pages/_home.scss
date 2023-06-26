@@ -1,3 +1,22 @@
 .page-home {
 	
 }
+
+.home {
+    &__consultant {
+        max-width: 90vw;
+        margin: 0 auto;
+        
+        @include min-xl {
+            gap: 10rem;
+            display: grid;
+            grid-template-columns: 35% auto;
+            box-sizing: border-box;
+            align-items: center!important;
+        }
+
+        p {
+            margin: 0;
+        }
+    }
+}
