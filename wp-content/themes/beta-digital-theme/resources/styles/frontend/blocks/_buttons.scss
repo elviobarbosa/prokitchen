@@ -1,0 +1,49 @@
+.wp-block-button {
+    a {
+        box-sizing:border-box;
+        display: inline-block;
+        padding:0.5em 0;
+        background:none;
+        border:none;
+        border-top:2px solid $secondary-color;
+        border-bottom:2px solid $secondary-color;
+        border-image: linear-gradient(to right, $secondary-color 0%, #4db848 100%);
+        border-image-slice: 1;
+        position: relative;
+        transition:background 0.3s;
+        color: #fff;
+        font-size: 16px ;
+        margin-left:22px;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            width: 2em;
+            height: calc(100% + 0px);
+            border-radius: 3em 0 0 3em;
+            border: 2px solid $secondary-color;
+            position: absolute;
+            border-right: none;
+            transition:background 0.3s;
+            left: -2em;
+            top: -2px;
+        }
+        &::after {
+            border-radius: 0 3em 3em 0;
+            border: 2px solid #4db848;
+            position: absolute;
+            border-left: none;
+            left:auto;
+            right: -2em;
+            top: -2px;
+        }
+        &:hover {
+            background:rgba(0,0,0,0.3);
+            &:after,
+            &:before {
+                background:rgba(0,0,0,0.3);
+            }
+        }
+    }
+}

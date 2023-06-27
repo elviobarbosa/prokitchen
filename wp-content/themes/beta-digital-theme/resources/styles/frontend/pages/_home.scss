@@ -14,9 +14,16 @@
             box-sizing: border-box;
             align-items: center!important;
         }
+    }
 
-        p {
-            margin: 0;
+    &__diferencial {
+        max-width: 90vw;
+        margin: 0 auto;
+
+        &:nth-last-of-type('.wp-block-column') {
+            display: flex;
+            align-items: center;
+            justify-content: right;
         }
     }
 }
