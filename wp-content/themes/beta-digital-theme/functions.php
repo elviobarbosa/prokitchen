@@ -13,8 +13,9 @@ require_once 'app/config.php';
 require_once 'app/utils.php';
 require_once 'app/ajax.php';
 require_once 'app/enqueue.php';
-
+require_once 'app/gutemberg-patterns.php';
 require_once 'app/members.php';
+require_once 'app/shortcodes.php';
 
 function change_taxonomies_slug( $args, $taxonomy ) {
    

@@ -1,0 +1,44 @@
+.diferencial-header {
+    width: 90vw;
+    max-width: 130rem;
+    margin: 0 auto;
+
+    > div:last-child {
+        display: flex;
+        align-items: center;
+        justify-content: right;
+    }
+}
+
+.diferencial-slide {
+    width: 90vw;
+    max-width: 130rem;
+    margin: 0 auto;
+
+    .wp-block-group {
+        @include image-proportional(1300, 600);
+        overflow: hidden;
+        margin-bottom: 3rem;
+    }
+
+    .wp-block-column:first-child {
+        p, strong {
+            @include fluid-size(font-size, 20px, 32px);
+            line-height: 1.4em;
+            margin: 0;
+            padding: 0;
+            max-width: 80%;
+        }
+    }
+
+    .wp-block-column:last-child {
+        align-items: center;
+        display: flex;
+        p, strong {
+            @include fluid-size(font-size, 16px, 24px);
+            line-height: 1.2em;
+            margin: 0;
+            padding: 0
+        }
+    }
+}

@@ -48,7 +48,7 @@ article {
         border-radius: 20px;
         overflow: hidden;
     }
-    
+
     .wp-block-image {
         @include border-radius(2rem);
         overflow: hidden;
@@ -71,4 +71,10 @@ article {
         color: $secondary-color;
         font-family: 600;
     }
+}
+
+.wp-block-columns {
+    width: 90vw;
+    max-width: 130rem;
+    margin: 0 auto;
 }

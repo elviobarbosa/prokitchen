@@ -17,13 +17,18 @@
     }
 
     &__diferencial {
-        max-width: 90vw;
+        width: 90vw;
+        max-width: 130rem;
         margin: 0 auto;
 
-        &:nth-last-of-type('.wp-block-column') {
+        > div:last-child {
             display: flex;
             align-items: center;
             justify-content: right;
+        }
+
+        .wp-block-cb-slide {
+            
         }
     }
 }

@@ -1,6 +1,5 @@
 <?php
 $theme_dir = get_template_directory();
-$scan_dir = $theme_dir . '/app/cpt/';
+$scan_dir = $theme_dir . '/app/shortcodes/';
 
-require_once($scan_dir . 'products.php');
 require_once($scan_dir . 'partners.php');

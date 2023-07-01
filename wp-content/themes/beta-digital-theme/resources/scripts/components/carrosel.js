@@ -1,3 +1,5 @@
+import $ from 'jquery';
+import 'slick-carousel/slick/slick';
 export default class Carrosel {
     constructor() {
         this.selector = '.swiper';
@@ -6,11 +8,12 @@ export default class Carrosel {
 
     init() {
         const sliders = document.querySelectorAll(this.selector);
+        const slick = document.querySelectorAll('[data-js=slick]');
 
-        if (!sliders) return;
-        this.initSwiper(sliders);
+        if ( sliders ) this.initSwiper(sliders);
+        if ( slick ) this.initSlick(slick);
+        
     }
-
 
     initSwiper(sliders) {
         let i = 1;
@@ -28,6 +31,20 @@ export default class Carrosel {
             }),
         ];
         i++;
+        });
+    }
+
+    initSlick(sliders) {
+        sliders.forEach((sliderEl) => {
+            const params = (sliderEl.dataset.slick) ? JSON.parse(sliderEl.dataset.slick) : {};
+            setTimeout(function () {
+                $(sliderEl).slick(params);
+            }, 5000);
+            
+        });
+        $(document).on('ready', function () {
+            // initialization of slick carousel
+            alert('ok')
         });
     }
 }

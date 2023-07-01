@@ -562,6 +562,12 @@ article strong {
   font-family: 600;
 }
 
+.wp-block-columns {
+  width: 90vw;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+
 @media (max-width: 767.9px) {
   .bd-block-product-header {
     display: flex;
@@ -723,7 +729,7 @@ article strong {
 }
 .bd-block-page-titles__title {
   /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
-  margin: 0;
+  margin-top: 0;
   font-family: "Sora", sans-serif;
 }
 .bd-block-page-titles__title {
@@ -784,6 +790,85 @@ article strong {
 }
 .wp-block-button a:hover:after, .wp-block-button a:hover:before {
   background: rgba(0, 0, 0, 0.3);
+}
+
+.diferencial-header {
+  width: 90vw;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.diferencial-header > div:last-child {
+  display: flex;
+  align-items: center;
+  justify-content: right;
+}
+
+.diferencial-slide {
+  width: 90vw;
+  max-width: 130rem;
+  margin: 0 auto;
+}
+.diferencial-slide .wp-block-group {
+  height: 0;
+  padding-bottom: 46.1538461538%;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 3rem;
+}
+.diferencial-slide .wp-block-group figure {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.diferencial-slide .wp-block-group img {
+  height: 100%;
+  object-fit: cover;
+  width: 100%;
+}
+.diferencial-slide .wp-block-column:first-child p, .diferencial-slide .wp-block-column:first-child strong {
+  /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
+  line-height: 1.4em;
+  margin: 0;
+  padding: 0;
+  max-width: 80%;
+}
+.diferencial-slide .wp-block-column:first-child p, .diferencial-slide .wp-block-column:first-child strong {
+  font-size: 20px;
+}
+@media screen and (min-width: 320px) {
+  .diferencial-slide .wp-block-column:first-child p, .diferencial-slide .wp-block-column:first-child strong {
+    font-size: calc(20px + 12 * ((100vw - 320px) / 1046));
+  }
+}
+@media screen and (min-width: 1366px) {
+  .diferencial-slide .wp-block-column:first-child p, .diferencial-slide .wp-block-column:first-child strong {
+    font-size: 32px;
+  }
+}
+.diferencial-slide .wp-block-column:last-child {
+  align-items: center;
+  display: flex;
+}
+.diferencial-slide .wp-block-column:last-child p, .diferencial-slide .wp-block-column:last-child strong {
+  /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+}
+.diferencial-slide .wp-block-column:last-child p, .diferencial-slide .wp-block-column:last-child strong {
+  font-size: 16px;
+}
+@media screen and (min-width: 320px) {
+  .diferencial-slide .wp-block-column:last-child p, .diferencial-slide .wp-block-column:last-child strong {
+    font-size: calc(16px + 8 * ((100vw - 320px) / 1046));
+  }
+}
+@media screen and (min-width: 1366px) {
+  .diferencial-slide .wp-block-column:last-child p, .diferencial-slide .wp-block-column:last-child strong {
+    font-size: 24px;
+  }
 }
 
 input[type=text],
@@ -1217,6 +1302,56 @@ textarea:focus {
   height: 150px;
 }
 
+.partners-slide {
+  position: relative;
+}
+.partners-slide::after {
+  content: "";
+  background-color: white;
+  border-radius: 20px;
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  max-width: 400px;
+  max-height: 400px;
+  display: block;
+  transform: skewY(10deg);
+}
+.partners-slide__decorator {
+  background-color: #1F3465;
+  border-radius: 20px;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  max-width: 400px;
+  max-height: 400px;
+  display: block;
+  transform: skewY(10deg);
+}
+.partners-slide__container > div {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  z-index: 1;
+}
+.partners-slide__item {
+  height: 100vh;
+  width: 100vw;
+  max-width: 400px;
+  max-height: 400px;
+  z-index: 1;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+}
+.partners-slide__item img {
+  height: auto;
+  max-height: 40px;
+  max-width: 80%;
+  transform: skewY(10deg);
+}
+
 .nav__menu {
   display: none;
 }
@@ -1370,15 +1505,15 @@ nav.menu ul a {
   }
 }
 .home__diferencial {
-  max-width: 90vw;
+  width: 90vw;
+  max-width: 130rem;
   margin: 0 auto;
 }
-.home__diferencial:nth-last-of-type(".wp-block-column") {
+.home__diferencial > div:last-child {
   display: flex;
   align-items: center;
   justify-content: right;
 }
-
 .archive-products__grid {
   display: grid;
   column-gap: 3rem;

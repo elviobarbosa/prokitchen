@@ -21,7 +21,7 @@ function posttype_produtos()
     register_post_type( 'post_produtos',
         array(
             'show_ui' => true,
-            'menu_icon'         => 'dashicons-admin-appearance',
+            'menu_icon'         => 'dashicons-products',
             'labels'            => $labels,
             'public'            => true,
             'show_in_menu'      => true,
