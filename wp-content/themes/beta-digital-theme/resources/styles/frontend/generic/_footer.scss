@@ -1,9 +1,16 @@
 .footer {
     padding-top: 5rem;
-    background-color: $secondary-color;
+    background-color: $primary-color;
 
 	&__container {
         padding: 0 3rem;
+
+        @include min-xl {
+            display: flex;
+            justify-content: space-between;
+            max-width: $max-vw;
+            margin: 0 auto;
+        }
     }
 
     &__item {
@@ -34,6 +41,21 @@
         svg {
             fill: white;
             width: 40px;
+        }
+    }
+
+    &__sign {
+        display: grid;
+        grid-template-columns: auto 48px;
+        padding: 0 3rem;
+        max-width: $max-vw;
+        margin: 0 auto;
+        align-items: center;
+        border-top: 1px solid #0a2666;
+
+        p {
+            font-size: 14px;
+            text-align: center;
         }
     }
 }

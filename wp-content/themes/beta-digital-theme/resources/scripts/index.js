@@ -2,7 +2,7 @@ import $ from 'jquery';
 import Carrosel from './components/carrosel';
 import Accordeon from './components/accordeon';
 import FormProduct from './components/form-products';
-
+import ImageCat from './components/image-cat';
 
 function domReady(fn) {
     document.addEventListener("DOMContentLoaded", fn);
@@ -11,6 +11,7 @@ function domReady(fn) {
       new Carrosel();
       new Accordeon();
       new FormProduct();
+      new ImageCat();
     }
 }
 

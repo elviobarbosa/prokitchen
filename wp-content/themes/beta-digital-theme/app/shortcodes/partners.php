@@ -7,8 +7,11 @@ function partners() {
     );
     $post_list = get_posts($argsQuery);
     $slickdata = [
-        'slidesToShow' => 1, 
-        'slidesToScroll' => 1
+        'slidesToShow'   => 1, 
+        'slidesToScroll' => 1,
+        'arrows'         => false,
+        'autoplay'       => true,
+        'vertical'       => true
     ];
     //data-js="slick" data-slick=\''. wp_json_encode( $slickdata )  .'\'
     $opacity = 1;

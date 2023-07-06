@@ -30,6 +30,13 @@
                     </ul>
                 </div>
             </div>
+
+            <div class="footer__sign">
+                <p>© 2023 PRO Kitchen. Todos os direitos reservados.</p>
+                <a href="https://soubeta.digital" target="_blank" alt="Site criado por BETA DIGITAL">
+                    <?php the_SVG('beta-digital') ?>
+                </a>
+            </div>
         </footer>
 
     </body>
