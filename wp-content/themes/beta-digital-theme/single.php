@@ -5,33 +5,34 @@ get_header();
 ?>
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
     <div class="single-blog">
-        <div class="container">
-            <div class="single-blog__container">
-                <div class="single-blog__header">
-                    <time 
-                        class="single-blog__date" 
-                        datetime="<?php echo get_the_date( 'Y-d-m' ) ?> <?php the_time( 'H:i:s' ) ?>">
-                        <?php echo get_the_date( 'j M Y' ) ?>
-                    </time> 
+        <article class="the-content">
+            <div class="container">
+                <div class="single-blog__container">
+                    <div class="single-blog__header">
+                        <time 
+                            class="single-blog__date" 
+                            datetime="<?php echo get_the_date( 'Y-d-m' ) ?> <?php the_time( 'H:i:s' ) ?>">
+                            <?php echo get_the_date( 'j M Y' ) ?>
+                        </time> 
 
-                    <h1 class="title-blog"><?php the_title() ?></h1>
-                    <p class="single-blog__subtitle">
-                        <?php echo getExcerpt(200, $post->ID) ?>
-                    </p>
-                </div>
-                <div class="single-blog__body">
-                    <?php if (has_post_thumbnail()) : ?>
-                        <figure class="single-blog__image">
-                            <?php the_post_thumbnail() ?>
-                        </figure>
-                    <?php endif; ?>
-                
-                    <div class="single-blog__excerpt">
-                        <?php the_content() ?>
+                        <h1 class="title-blog"><?php the_title() ?></h1>
+                        <p class="single-blog__excerpt">
+                            <?php  ?>
+                        </p>
+                    </div>
+                    <div class="single-blog__body">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <figure class="single-blog__image">
+                                <?php the_post_thumbnail(); ?>
+                            </figure>
+                        <?php endif; ?>
+                        <div class="single-blog__content">
+                            <?php the_content() ?>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
 
 
         <div class="single-blog__share">
