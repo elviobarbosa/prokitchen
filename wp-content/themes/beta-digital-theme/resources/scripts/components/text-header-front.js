@@ -1,6 +1,5 @@
 import $ from 'jquery';
 import anime from 'animejs/lib/anime.es.js';
-import YT from 'youtube-iframe-api/iframe-api';
 
 export default class HeaderFront {
 
@@ -30,30 +29,6 @@ export default class HeaderFront {
         }
         
         let counter = 0;
-
-        //const player = document.getElementById("ytplayer");
-
-        $(document).ready(function () {
-            function onYouTubeIframeAPIReady() {
-                player = new YT.Player('player', {
-                  videoId: 'SEuq9pIYKqI',
-                  playerVars: {
-                    autoplay: 1,
-                    loop: 1,
-                    playlist: 'SEuq9pIYKqI'
-                  },
-                  events: {
-                    onReady: onPlayerReady
-                  }
-                });
-              }
-        
-              function onPlayerReady(event) {
-                event.target.playVideo();
-              }
-        });
-
-      
 
         const animation = (target) => {
             $(target).css({rotateY: '-90deg', opacity: 0});
