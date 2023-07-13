@@ -1,0 +1,22 @@
+.ml10 {
+    position: relative;
+
+    .letters {
+        &:nth-child(n + 2) {
+            display: none;
+        }
+    }
+}
+  
+.ml10 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    
+}
+  
+.ml10 .letter {
+    display: inline-block;
+    transform-origin: 0 0;
+    opacity: 0;
+    transform: rotateY(-90deg);
+}

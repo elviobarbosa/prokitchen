@@ -1,0 +1,47 @@
+.bd-block-header-front {
+    &__cover {
+        @include image-proportional(1920, 629);
+    }
+
+    &__figure {
+        @include border-radius(0)
+    }
+
+    &__title {
+        @include fluid-size(font-size, 32px, 60px);
+        padding: 0 3rem;
+
+        span {
+            @include fluid-size(font-size, 32px, 60px);
+            @extend %gradient-text;
+        }
+
+        div {
+            display: inline-block;
+        }
+    }
+
+    &__container {
+        display: grid;
+        grid-template-columns: 70% auto;
+        gap: 20px;
+        width: 90vw;
+        margin: 0 auto;
+    }
+
+    &__video {
+        position: relative;
+        overflow: hidden;
+        border-radius: 12px;
+        transform: translate(0px, -40px);
+        
+        iframe {
+            width: 210%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            height: 100%;
+        }
+    }
+}

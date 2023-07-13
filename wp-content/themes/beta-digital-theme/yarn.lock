@@ -1416,6 +1416,11 @@ ajv@^8.0.0, ajv@^8.8.0:
     require-from-string "^2.0.2"
     uri-js "^4.2.2"
 
+animejs@^3.2.1:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/animejs/-/animejs-3.2.1.tgz#de9fe2e792f44a777a7fdf6ae160e26604b0cdda"
+  integrity sha512-sWno3ugFryK5nhiDm/2BKeFCpZv7vzerWUcUPyAZLDhMek3+S/p418ldZJbJXo5ZUOpfm2kP2XRO4NJcULMy9A==
+
 ansi-html-community@^0.0.8:
   version "0.0.8"
   resolved "https://registry.yarnpkg.com/ansi-html-community/-/ansi-html-community-0.0.8.tgz#69fbc4d6ccbe383f9736934ae34c3f8290f1bf41"
@@ -5221,3 +5226,8 @@ yargs@^17.2.1:
     string-width "^4.2.3"
     y18n "^5.0.5"
     yargs-parser "^21.0.0"
+
+youtube-iframe-api@^0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/youtube-iframe-api/-/youtube-iframe-api-0.0.1.tgz#37233316bcaf090cfb596e9e4de9e55eae710695"
+  integrity sha512-W0iLju4i77EJgJx5J9vF+sLtPtTwMmEOp59xqQqslWLJxUuINp5KXEepmQgNy/mAfP9nYxE7VwoHQr5c+Grzzg==

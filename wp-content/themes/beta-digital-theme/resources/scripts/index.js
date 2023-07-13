@@ -3,6 +3,7 @@ import Carrosel from './components/carrosel';
 import Accordeon from './components/accordeon';
 import FormProduct from './components/form-products';
 import ImageCat from './components/image-cat';
+import HeaderFront from './components/text-header-front';
 
 function domReady(fn) {
     document.addEventListener("DOMContentLoaded", fn);
@@ -12,6 +13,7 @@ function domReady(fn) {
       new Accordeon();
       new FormProduct();
       new ImageCat();
+      new HeaderFront();
     }
 }
 
