@@ -5,7 +5,11 @@
 	&__container {
         padding: 0 3rem;
 
-        @include min-xl {
+        @include max-lg {
+            text-align: center;
+        }
+
+        @include min-lg {
             display: flex;
             justify-content: space-between;
             max-width: $max-vw;
@@ -31,8 +35,11 @@
         padding: 0;
         margin: 0;
         display: flex;
-        
 
+        @include max-lg {
+            justify-content: center;
+        }
+        
         li {
             list-style: none;
             padding-right: 3rem;

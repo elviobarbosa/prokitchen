@@ -1,14 +1,121 @@
-.single-blog {
+.single-post {
+    background-color: #EBEBEB!important;
+    background-image: url($imgpath + '/v-line.png');
 
-    &__date {}
+    &__main {
+        max-width: 980px;
 
-    &__image {}
+        @include max-lg {
+            padding: {
+                left: 3rem;
+                right: 3rem;
+            };
+        }
 
-    &__excerpt {}
+        @include min-lg {
+            width: 90vw;
+            margin: 0 auto;
+        }
+    }
 
-    &__share {}
+    &__content {
+        color: $primary-color;
 
-    &__category {}
+        p {
+            &:first-of-type {
+                @include max-lg {
+                    font-size: 22px;
+                    line-height: 1.3em;
+                }
+        
+                @include min-lg {
+                    font-size: 32px;
+                    line-height: 1.3em;
+                }
+            }
+        }
 
-    &__shared {}
+        @include max-lg {
+            font-size: 16px;
+        }
+
+        @include min-lg {
+            font-size: 24px;
+        }
+        
+    }
+
+    &__date {
+        @extend %blog-date;
+    }
+
+    img {
+        @include border-radius(20px);
+        max-width: 100%;
+    }
+
+    figcaption {
+        font-size: 14px;
+        color: grey;
+    }
+
+    &__subtitle {
+        @extend %blog-subtitle;
+    }
+
+    &__title-blog {
+       @extend %blog-title;
+    }
+
+    &__category {
+        text-align: center;
+        margin-top: 4rem;
+
+        li {
+            list-style: none;
+            display: inline-block;
+
+            &:last-child {
+                span {
+                    display: none
+                }
+            }
+        }
+
+        span {
+            display: inline-block;
+            margin-left: 2rem;
+        }
+        a, span {
+            color: $primary-color;
+            text-decoration: none;
+            text-transform: uppercase;
+
+            @include max-lg {
+                font-size: 16px;
+            }
+
+            @include min-lg {
+                font-size: 18px;
+            }
+            
+        }
+
+    }
+
+    &__features {
+        display: flex;
+    }
+
+    &__shared {
+
+        ul {
+            display: flex;
+        }
+
+        li {
+            list-style: none;
+            margin-right: 1rem;
+        }
+    }
 }

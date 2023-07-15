@@ -29,3 +29,12 @@
         align-items: center;
     }
 }
+
+.front-page {
+    .header {
+        @include min-xl {
+            background-color: transparent;
+            border: none;
+        }
+    }
+}

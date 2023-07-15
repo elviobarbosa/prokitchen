@@ -19,7 +19,7 @@ function partners() {
     $decorator = '';
     for ($i = 1; $i < 5; $i++) {
         $opacity -= 0.15;
-        $position -= 20;
+        $position -= 10;
         $decorator .= '<div class="partners-slide__decorator" style="opacity:' .$opacity. '; transform: translate('.abs($position).'px, '.$position.'px) skewY(10deg)"></div>';
     }
     $result = '<div class="partners-slide">';

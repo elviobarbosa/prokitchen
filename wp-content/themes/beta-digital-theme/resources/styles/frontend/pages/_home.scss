@@ -31,4 +31,22 @@
             
         }
     }
+
+    &__produtos {
+        padding: {
+            left: 3rem;
+            right: 3rem;
+        };
+        margin: 0 auto;
+    }
+
+    &__produtos.aligncenter {
+        @include max-lg {
+            text-align: left;
+        }
+    }
+
+    .page-title {
+        display: none;
+    }
 }

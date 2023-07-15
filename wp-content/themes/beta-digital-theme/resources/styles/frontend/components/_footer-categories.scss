@@ -30,7 +30,11 @@
 
     &__list {
         color: $grey;
-        @include min-xl {
+        @include max-lg {
+            padding: 0;
+        }
+
+        @include min-lg {
             display: none;
             position: absolute;
             left: 400px;
@@ -41,16 +45,25 @@
 
     &__item {
         list-style: none;
+        padding-bottom: 1rem;
 
         a {
             color: $grey;
             text-decoration: none;
-            font-size: 20px;
+            
+            @include max-lg {
+                padding: 0 0 0 1rem;
+                font-size: 16px;
+            }
+            
+            @include min-xl {
+                font-size: 20px;
+            }
         }
     }
 
     &__inner {
-        @include min-xl {
+        @include min-lg {
             max-width: 400px;
         }
 
@@ -70,11 +83,19 @@
         border-bottom: 1px solid $secondary-color;
 
         a {
-            font-size: 22px;
             color: $grey;
             text-decoration: none;  
             display: inline-block;
-            width: 100%; 
+            width: 100%;
+
+            @include max-lg {
+                padding: 0 0 0 1rem;
+                font-size: 18px;
+            }
+
+            @include min-lg {
+                font-size: 22px;
+            }
         }
     }
 

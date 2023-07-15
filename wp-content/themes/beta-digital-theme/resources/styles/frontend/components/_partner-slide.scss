@@ -1,39 +1,52 @@
 .partners-slide {
     position: relative;
 
-    // &::before {
-    //     content: "";
-    //     background-color: white;
-    //     border-radius: 20px;
-    //     position: relative;
-    //     height: 100vh;
-    //     max-height: 400px;
-    //     display: block;
-    // }
+    @include max-lg {
+        margin-top: 6rem;
+    }
 
     &::after {
         content: "";
         background-color: white;
         border-radius: 20px;
         position: relative;
-        height: 100vh;
-        width: 100vw;
-        max-width: 400px;
-        max-height: 400px;
         display: block;
         transform: skewY(10deg);
+
+        @include max-lg {
+            height: 70vh;
+            width: 70vw;
+            max-width: 400px;
+            max-height: 300px;
+        }
+        @include min-lg {
+            height: 100vh;
+            width: 100vw;
+            max-width: 400px;
+            max-height: 400px;
+        }
     }
 
     &__decorator {
         background-color: #1F3465;
         border-radius: 20px;
         position: absolute;
-        height: 100vh;
-        width: 100vw;
-        max-width: 400px;
-        max-height: 400px;
         display: block;
         transform: skewY(10deg);
+
+        @include max-lg {
+            height: 70vh;
+            width: 70vw;
+            max-width: 400px;
+            max-height: 300px;
+        }
+
+        @include min-lg {
+            height: 100vh;
+            width: 100vw;
+            max-width: 400px;
+            max-height: 400px;
+        }
     }
 
     &__container >div {
@@ -45,20 +58,36 @@
     }
 
     &__item {
-        height: 100vh;
-        width: 100vw;
-        max-width: 400px;
-        max-height: 400px;
         z-index: 1;
         display: flex!important;
         align-items: center;
         justify-content: center;
+
+        @include max-lg {
+            width: 70vw;
+            height: 70vh;
+            max-width: 400px;
+            max-height: 300px;
+        }
+
+        @include min-lg {
+            height: 100vh;
+            width: 100vw;
+            max-width: 400px;
+            max-height: 400px;
+        }
 
         img {
             height: auto;
             max-height: 40px;
             max-width: 80%;
             transform: skewY(10deg);
+        }
+    }
+
+    .slick-slide > div {
+        @include max-lg {
+            width: 70vw;
         }
     }
 }

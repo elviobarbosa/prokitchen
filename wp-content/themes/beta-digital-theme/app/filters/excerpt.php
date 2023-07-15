@@ -11,4 +11,4 @@ function theme_slug_excerpt_length( $length ) {
     }
     return 50;
 }
-//add_filter( 'excerpt_length', 'theme_slug_excerpt_length', 999 );
+add_filter( 'excerpt_length', 'theme_slug_excerpt_length', 999 );

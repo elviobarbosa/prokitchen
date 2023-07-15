@@ -1,16 +1,41 @@
+.pagination {
+    text-align: center;
+    margin: 0 auto;
+    padding-bottom: 10rem;
+}
+
+.screen-reader-text {
+    display: none;
+}
+
 .nav-links {
     list-style-type: none;
     width: max-content;
+    margin: 0 auto;
+
+    a, span {
+        display: inline-block;
+        margin: {
+            left: 1rem;
+            right: 1rem;
+        };
+        text-decoration: none;
+    }
 
     .page-numbers {
-        
+        background-color: $secondary-color;
+        @include border-radius(50px);
+        overflow: hidden;
+        width: 3rem;
+        height: 3rem;
+        color: white;
 
         &:not(:last-child) {
             
         }
 
         &.current {
-           
+           background-color: $grey
         }
     }
 }

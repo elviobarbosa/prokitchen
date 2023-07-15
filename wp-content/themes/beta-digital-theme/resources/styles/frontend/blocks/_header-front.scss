@@ -1,6 +1,17 @@
 .bd-block-header-front {
+
+    @include min-xl {
+        margin-top: -65px;
+    }
+
     &__cover {
-        @include image-proportional(1920, 629);
+        @include max-lg {
+            @include image-proportional(400, 300);
+        }
+
+        @include min-lg {
+            @include image-proportional(1920, 629);
+        }
     }
 
     &__figure {
@@ -22,26 +33,47 @@
     }
 
     &__container {
-        display: grid;
-        grid-template-columns: 70% auto;
-        gap: 20px;
-        width: 90vw;
-        margin: 0 auto;
+        @include min-lg {
+            display: grid;
+            grid-template-columns: 70% auto;
+            gap: 20px;
+            width: 90vw;
+            margin: 0 auto;
+        }
     }
 
     &__video {
         position: relative;
         overflow: hidden;
         border-radius: 12px;
-        transform: translate(0px, -40px);
+
+        @include max-lg {
+            padding-bottom: 56.25%; /* 16:9 */
+            height: 0;
+            max-width: 90vw;
+            margin: 0 auto;
+        }
+
+        @include min-lg {
+            transform: translate(0px, -40px);
+        }
         
         iframe {
-            width: 210%;
-            position: absolute;
-            transform: translate(-50%, -50%);
-            top: 50%;
-            left: 50%;
-            height: 100%;
+            @include max-lg {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+            @include min-lg {
+                width: 210%;
+                position: absolute;
+                transform: translate(-50%, -50%);
+                top: 50%;
+                left: 50%;
+                height: 100%;
+            }
         }
     }
 }

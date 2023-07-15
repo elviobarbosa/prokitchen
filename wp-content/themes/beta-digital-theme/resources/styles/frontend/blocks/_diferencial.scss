@@ -8,6 +8,23 @@
         align-items: center;
         justify-content: right;
     }
+    .is-layout-flex {
+        @include max-lg {
+            gap: 0;
+            padding-bottom: 2rem;
+        }
+    }
+    .wp-container-7.wp-container-7 {
+        @include max-lg {
+            justify-content: flex-start;
+        }
+    }
+
+    .wp-block-buttons {
+        @include min-lg {
+            transform: translateX(-30px);
+        }
+    }
 }
 
 .diferencial-slide {

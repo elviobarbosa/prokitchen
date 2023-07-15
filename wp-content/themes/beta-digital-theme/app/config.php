@@ -19,7 +19,7 @@ function setup() {
 
     add_filter( 'wp_mail_from', 'sender_email' );
     function sender_email( $original_email_address ) {
-        return 'noreply@prokitcheb.com.br';
+        return 'noreply@prokitchen.com.br';
     }
 
     add_filter( 'wp_mail_from_name', 'sender_name' );

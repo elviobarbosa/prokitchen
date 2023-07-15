@@ -47,7 +47,15 @@ function my_theme_archive_title( $title ) {
 
     if ( is_singular(['post_produtos']) ) {
         $title = 'Produtos';
-    } 
+    }
+
+    if ( is_front_page() ) {
+        $title = '';
+    }
+
+    if ( is_single() || is_home() ) {
+        $title = 'Blog';
+    }
 
     return $title;
 }

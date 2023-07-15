@@ -25,10 +25,8 @@ $argsCat = array(
 							datetime="<?php echo get_the_date( 'Y-d-m' ) ?> <?php the_time( 'H:i:s' ) ?>">
 							<?php echo get_the_date( 'j M Y' ) ?>
 						</time> 
-						<a class="blog__link" href="<?php the_permalink(); ?>">
-							<h2 class="blog__title"><?php the_title() ?></h2>
-							<p class="blog__excerpet"><?php echo getExcerpt(200, $post->ID) ?></p>
-						</a>
+							<h2 class="blog__title"><a class="blog__link" href="<?php the_permalink(); ?>"><?php the_title() ?></a></h2>
+							<p class="blog__excerpet"><?php echo get_the_excerpt() ?></p>
 					</div>
 				</article>
 			<?php endwhile; endif; ?>
