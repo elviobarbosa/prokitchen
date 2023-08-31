@@ -1,16 +1,16 @@
         <footer id="footer" class="footer" itemscope itemtype="https://schema.org/Organization">
             <div class="footer__container">
                 <div class="footer__item" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <p><strong>Escritório</strong></p>
                     <a href="#" target="_blank">
-                        <p><strong>Escritório</strong></p>
                         <p itemprop="streetAddress">Rua Nome da Rua, XX</p>
                         <p itemprop="addressLocality">Fortaleza, Ceará</p>
                     </a>
                 </div>
 
                 <div class="footer__item" itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
+                    <p><strong>ProKitchen Lab</strong></p>
                     <a href="#" target="_blank">
-                        <p><strong>ProKitchen Lab</strong></p>
                         <p itemprop="streetAddress">Rua Nome da Rua, XX</p>
                         <p itemprop="addressLocality">Fortaleza, Ceará</p>
                     </a>
@@ -41,5 +41,5 @@
 
     </body>
     <?php wp_footer() ?>
-    <script type="module" src="<?php echo URLTEMA ?>/dist/scripts/frontend-bundle.js"></script>
+    <script type="module" src="<?php echo URLTEMA ?>/dist/scripts/frontend-bundle.js" defer></script>
 </html>

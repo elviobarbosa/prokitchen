@@ -1,0 +1,14 @@
+@mixin bg-change-animation($initial-color, $final-color, $name) {
+    @keyframes #{$name} {
+      0%, 100% {
+        background-color: $initial-color;
+      }
+      50% {
+        background-color: $final-color;
+      }
+      90% {
+        background-color: $initial-color;
+      }
+    }
+  }
+  

@@ -1,6 +1,25 @@
 .footer {
     padding-top: 5rem;
     background-color: $primary-color;
+    position: relative;
+    
+    &::after {
+        content: '';
+        position: absolute;
+        width: 90vw;
+        background-color: #1f283e;
+        height: 1px;
+        margin-left: 50%;
+        transform: translateX(-50%);
+
+        @include max-lg {
+            bottom: 11rem;
+        }
+
+        @include min-lg {
+            bottom: 7rem;
+        }
+    }
 
 	&__container {
         padding: 0 3rem;
@@ -29,6 +48,11 @@
             color: white;
             text-decoration: none;
         }
+
+        a:hover {
+            color: $secondary-color;
+            transition: all 0.5s;
+        }
     }
 
     &__social-midia {
@@ -45,24 +69,48 @@
             padding-right: 3rem;
         }
 
+        a:hover{
+            path,
+            svg {
+                fill: $secondary-color;
+                transition: all 0.5s;
+            }
+        }
+
+        path,
         svg {
             fill: white;
             width: 40px;
+            transition: all 0.5s;
         }
     }
 
     &__sign {
-        display: grid;
-        grid-template-columns: auto 48px;
+
         padding: 0 3rem;
         max-width: $max-vw;
         margin: 0 auto;
         align-items: center;
-        border-top: 1px solid #0a2666;
+
+        @include min-lg {
+            display: grid;
+            grid-template-columns: auto 48px;
+           
+        }
 
         p {
             font-size: 14px;
             text-align: center;
+        }
+
+        a {
+            width: 48px;
+            display: inline-block;
+            
+            @include max-lg {
+                margin-left: 50%;
+                transform: translateX(-50%);
+            }
         }
     }
 }

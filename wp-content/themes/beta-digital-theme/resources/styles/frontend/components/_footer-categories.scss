@@ -6,9 +6,17 @@
     background-repeat: no-repeat;
     background-size: contain;
 
+    &__content {
+        @include min-xl {
+            display: flex;
+            max-width: $max-vw;
+            margin: 0 auto;
+            justify-content: space-between;
+        }
+        
+    }
+
     &__container {
-        max-width: $max-vw;
-        margin: 0 auto;
         position: relative;
     }
 
@@ -40,6 +48,7 @@
             left: 400px;
             top: 180px;
             height: 100%;
+            width: 100%;
         }
     }
 
@@ -100,12 +109,18 @@
     }
 
     &__img {
-        float: right;
-        transform: translateY(-30%);
-        width: 40%;
+        // float: right;
+        // transform: translateY(-60%);
+        // width: 40%;
+        max-width: 500px;
 
         img {
-            width: 90%;
+            max-height: 600px;
+            width: 100%;
+            height: auto;
+            
+            // margin-left: 50%;
+            // transform: translate(-50%, 0);
         }
     }
 

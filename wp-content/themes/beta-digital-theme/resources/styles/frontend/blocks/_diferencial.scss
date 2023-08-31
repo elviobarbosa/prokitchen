@@ -1,6 +1,6 @@
 .diferencial-header {
     width: 90vw;
-    max-width: 130rem;
+    max-width: $max-vw;
     margin: 0 auto;
 
     > div:last-child {
@@ -29,7 +29,7 @@
 
 .diferencial-slide {
     width: 90vw;
-    max-width: 130rem;
+    max-width: $max-vw;
     margin: 0 auto;
 
     .wp-block-group {

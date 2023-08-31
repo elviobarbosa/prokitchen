@@ -1,4 +1,5 @@
 .nav {
+	
 	&__menu {
 		display: none;
 	}
@@ -6,28 +7,27 @@
 	&__h-menu {
 		z-index: 1;
 		position: relative;
+		display: flex;
+		align-items: center;
+		font-size: 1.6rem;
+	}
+
+	&__h-bars {
+		margin-right: 1rem;
 	}
 
 	&__control {
 		position: relative;
 		
 		span {
-			@include fluid-size(width, 35px, 70px);
-			@include fluid-size(height, 3px, 5px);
+			@include fluid-size(width, 35px, 35px);
+			@include fluid-size(height, 3px, 4px);
 			background-color: white;
 			display: block;
 			transition: all 0.3s ease-out;
 
 			&:not(:last-child) {
 				@include fluid-size(margin-bottom, 3px, 5px);
-			}
-
-			&:first-of-type {
-				margin-right: 1rem;
-			}
-
-			&:last-of-type {
-				margin-left: 1rem;
 			}
 		}
 	}
@@ -39,6 +39,9 @@
 		top: 0;
 		z-index: 2;
 		opacity: 0;
+		height: 50px;
+		transform: translateY(-50%);
+		cursor: pointer;
 		
 		&:checked ~ .nav__h-menu span:first-of-type {
 			margin-right: 0;
@@ -54,17 +57,17 @@
 			@include fluid-size(margin-top, -3px, -5px);
 		}
 
-		&:checked ~ nav.menu {
-			left: 0;
+		&:checked ~ nav.menu,
+		&:checked ~ .nav__menu {
+			left: 60%;
 			transition: all 0.5s ease-in-out;
-			background-color: $primary-color;
+			background-color: $secondary-color;
 		}
 	}
 }
 
-nav.menu {
+.header nav {
 	display: flex;
-	width: 100vw;
 	height: 100vh;
 	left: 100%;
 	top: 0;
@@ -73,15 +76,27 @@ nav.menu {
 	background-color: $secondary-color;
 	align-items: center;
 
+	@include max-md {
+		width: 100vw;
+	}
+
+	@include min-md {
+		width: 40vw;
+	}
+
 	ul {
 		padding: 10%;
 		margin: 0;
 		width: 100%;
 
+		li {
+			list-style: none;
+		}
+
 		a {
 			color: white;
 			text-decoration: none;
-			@include fluid-size(font-size, 20px, 60px);
+			@include fluid-size(font-size, 20px, 30px);
 		}
 	}
 }

@@ -12,7 +12,6 @@ export default class InputMasks {
     }
 
     init() {
-        //console.log(this.selector)
         const form = document.querySelector(this.selector);
 
         if (form) {

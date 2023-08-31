@@ -15,46 +15,22 @@ foreach ($files as &$file) {
     endif;
 }
 
-
-//GET SVG FILE
-function the_SVG($file) {
-	echo get_the_SVG($file);
-}
-
-function get_the_SVG($file) {
-	// $ch = curl_init();
-    // curl_setopt($ch, CURLOPT_AUTOREFERER, TRUE);
-    // curl_setopt($ch, CURLOPT_HEADER, 0);
-    // curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-    // curl_setopt($ch, CURLOPT_URL, SVGPATH . $file . ".svg");
-    // curl_setopt($ch, CURLOPT_FOLLOWLOCATION, TRUE);       
-
-    // $data = curl_exec($ch);
-    // curl_close($ch);
-
-    //return $data;
-    $stream_opts = [
-	    "ssl" => [
-	        "verify_peer"=>false,
-	        "verify_peer_name"=>false,
-	    ]
-	];  
-
-	return file_get_contents(SVGPATH . $file . ".svg",false, stream_context_create($stream_opts));
-}
-
 function my_theme_archive_title( $title ) {
-
-    if ( is_singular(['post_produtos']) ) {
-        $title = 'Produtos';
-    }
-
+    
     if ( is_front_page() ) {
         $title = '';
     }
 
     if ( is_single() || is_home() ) {
         $title = 'Blog';
+    }
+
+    if ( is_singular(['post_produtos']) ) {
+        $title = 'Produtos';
+    }
+
+    if ( is_page() ) {
+        $title = wp_title('', false, 'right');
     }
 
     return $title;
@@ -98,6 +74,7 @@ function my_postthumbnail($post_thumbnail_id, $image_sizes, $view_port, $default
 
 
 // CONTACT FORM
+
 // add_filter( 'shortcode_atts_wpcf7', 'custom_shortcode_atts_wpcf7_filter', 10, 3 );
  
 // function custom_shortcode_atts_wpcf7_filter( $out, $pairs, $atts ) {

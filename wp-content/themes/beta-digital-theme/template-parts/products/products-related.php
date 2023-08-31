@@ -15,7 +15,7 @@ function byCat($post, $title, $subtitle) {
             'post_type' => 'post_produtos',
             'category__in' => $category_ids,
             'post__not_in' => array($post->ID),
-            'posts_per_page'=> 3,
+            'posts_per_page'=> 4,
             'ignore_sticky_posts'=>1
         );
 
@@ -24,7 +24,7 @@ function byCat($post, $title, $subtitle) {
         if ( !$myposts ) {
             $args = array(
                 'post_type' => 'post_produtos',
-                'posts_per_page'=> 3,
+                'posts_per_page'=> 4,
                 'post__not_in' => array($post->ID),
                 'ignore_sticky_posts'=>1
             );

@@ -4,6 +4,9 @@ import Accordeon from './components/accordeon';
 import FormProduct from './components/form-products';
 import ImageCat from './components/image-cat';
 import HeaderFront from './components/text-header-front';
+import ScrollingAnimation from './components/scrolling-animation';
+import InputMasks from './components/input-masks';
+import CF7Events from './components/cf7-events';
 
 function domReady(fn) {
     document.addEventListener("DOMContentLoaded", fn);
@@ -14,6 +17,9 @@ function domReady(fn) {
       new FormProduct();
       new ImageCat();
       new HeaderFront();
+      new ScrollingAnimation();
+      new InputMasks();
+      new CF7Events();
     }
 }
 

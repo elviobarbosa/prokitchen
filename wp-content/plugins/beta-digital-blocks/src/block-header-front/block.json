@@ -1,0 +1,58 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 2,
+	"name": "create-block/header-front",
+	"version": "0.1.0",
+	"title": "Header da Página Inicial",
+	"category": "beta-digital-category",
+	"icon": "schedule",
+	"description": "Insira esse bloco do topo da página inicial",
+	"supports": {
+		"html": false
+	},
+	"textdomain": "header-front",
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"attributes": {
+		"videoURL": {
+			"type": "string"
+		},
+		"titleContent": {
+			"type": "string"
+		},
+		"richContent": {
+			"type": "string",
+			"source": "html",
+			"selector": "h2"
+		},
+		"wordsContent": {
+			"type": "string"
+		},
+		"imageUrl": {
+			"type": "string"
+		},
+		"imageWidth": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "width"
+		},
+		"imageHeight": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "height"
+		},
+		"imageId": {
+			"type": "number"
+		},
+		"imageAlt": {
+			"type": "string",
+			"source": "attribute",
+			"selector": "img",
+			"attribute": "alt",
+			"default": ""
+		}
+	}
+}

@@ -10,6 +10,7 @@ body {
 	font-family: $body-font;
 	background-color: $primary-color;
 	color: white;
+	overflow-x: hidden;
 }
 
 p,
@@ -23,6 +24,7 @@ small,
 button {
 	font-family: $body-font;
 	@extend %body_text;
+
 }
 
 button {
@@ -114,4 +116,26 @@ figure {
 .swiper-prev::after {
 	content: "";
 	
+}
+
+.page-portfolio,
+.page-contato {
+	background-image: url($imgpath + '/v-line.png');
+}
+.page-contato {
+	
+
+	main {
+		position: relative;
+		&::after {
+			content: '';
+			position: absolute;
+			width: 90vw;
+			background-color: #1f283e;
+			height: 1px;
+			bottom: 0;
+			margin-left: 50%;
+			transform: translateX(-50%);
+		}
+	}
 }

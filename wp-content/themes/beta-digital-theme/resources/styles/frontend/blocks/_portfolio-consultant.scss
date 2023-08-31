@@ -1,0 +1,11 @@
+.portfolio{
+    &__consultant {
+        max-width: $max-vw;
+        margin: 0 auto;
+        align-items: center!important;
+    }
+
+    &__consultant-image .wp-block-group__inner-container {
+        @include image-proportional(959, 557)
+    }
+}

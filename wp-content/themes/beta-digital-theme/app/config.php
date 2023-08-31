@@ -66,7 +66,7 @@ function product_category() {
         'post_produtos',
         array(
             'label' => __( 'Atuação/Marca/Modelo' ),
-            'rewrite' => array( 'slug' => 'produtos-atuacao' ),
+            'rewrite' => array( 'slug' => 'produtos-por-marca', 'with_front' => false ),
             'hierarchical' => true,
             'show_in_rest' => true,
         )
@@ -77,13 +77,31 @@ function product_category() {
         'post_produtos',
         array(
             'label' => __( 'Categoria do Produto' ),
-            'rewrite' => array( 'slug' => 'produtos-por-categoria' ),
+            'rewrite' => array( 'slug' => 'produtos-por-categoria', 'with_front' => false ),
             'hierarchical' => true,
             'show_in_rest' => true,
         )
     );
 }
 add_action( 'init', 'product_category' );
+
+function custom_rewrite_rules() {
+    add_rewrite_rule( '^produtos-por-marca/([^/]+)/?', 'index.php?prod_category=$matches[1]', 'top' );
+    add_rewrite_rule( '^produtos-por-categoria/([^/]+)/?', 'index.php?prod-type_category=$matches[1]', 'top' );
+}
+add_action( 'init', 'custom_rewrite_rules' );
+
+function custom_taxonomy_template( $template ) {
+    $term = get_queried_object();
+
+    if ( isset( $term->taxonomy ) && ( $term->taxonomy == 'prod_category' || $term->taxonomy == 'prod-type_category' ) ) {
+        return get_template_directory() . '/template-produtos.php'; 
+    }
+
+    return $template;
+}
+add_filter( 'template_include', 'custom_taxonomy_template' );
+
 
 function register_custom_image_sizes() {
     if ( ! current_theme_supports( 'post-thumbnails' ) ) {

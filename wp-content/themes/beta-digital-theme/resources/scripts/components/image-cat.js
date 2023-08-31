@@ -18,13 +18,21 @@ export default class ImageCat {
         const $btns = $(elements);
         const $container = $('[data-js=image-category]');
 
+        const displayImage = (imgURL) => {
+            const $container = $('[data-js=image-category]');
+            $container.empty();
+            const $img = $('<img>');
+            $img.attr( { src : imgURL } );
+            $img.appendTo($container);
+        }
+
         if ( $(window).width() > 600 ) {
+            const first = $btns[0];
+            displayImage( $(first).attr('data-url') );
+            
             $btns.each(function() {
                 $(this).on('mouseover', () => {
-                    $container.empty();
-                    const $img = $('<img>');
-                    $img.attr( { src : $(this).attr('data-url') } );
-                    $img.appendTo($container);
+                    displayImage( $(this).attr('data-url') );
                 })
             });
         }

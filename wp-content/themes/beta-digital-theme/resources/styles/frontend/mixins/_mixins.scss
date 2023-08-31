@@ -112,7 +112,7 @@
 }
 
 @mixin max-xxxl {
-  @media (min-width: #{$screen-xxxl-min}) {
+  @media (max-width: #{$screen-xxxl-min}) {
     @content;
   }
 }

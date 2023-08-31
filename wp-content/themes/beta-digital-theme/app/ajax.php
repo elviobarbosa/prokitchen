@@ -1,5 +1,5 @@
 <?php
-function cad_agenda() {
+function ploomes() {
   
   if ( is_user_logged_in() ) {
     $userID = get_current_user_id();
@@ -24,5 +24,5 @@ function cad_agenda() {
   die();
 }
   
-  add_action('wp_ajax_cad_agenda', 'cad_agenda');
-  add_action('wp_ajax_nopriv_cad_agenda', 'cad_agenda');
+  add_action('wp_ajax_ploomes', 'ploomes');
+  add_action('wp_ajax_nopriv_ploomes', 'ploomes');

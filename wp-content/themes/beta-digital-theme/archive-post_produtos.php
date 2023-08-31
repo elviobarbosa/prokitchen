@@ -22,7 +22,7 @@ $categories = get_terms( array(
         ?>
     </div>
 
-    <article>
+    <article class="archive-products__container">
         <?php
             foreach ( $categories as $category ) {
                 $category_posts = get_posts( array(

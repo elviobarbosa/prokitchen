@@ -64,13 +64,19 @@
 }
 
 @mixin max-xxxl {
-  @media (min-width: #{$screen-xxxl-min}) {
+  @media (max-width: #{$screen-xxxl-min}) {
     @content;
   }
 }
 
 @mixin min-xxxl {
   @media (min-width: #{$screen-xxxl-min}) {
+    @content;
+  }
+}
+
+@mixin max-xxxxl {
+  @media (max-width: #{$screen-xxxxl-min}) {
     @content;
   }
 }

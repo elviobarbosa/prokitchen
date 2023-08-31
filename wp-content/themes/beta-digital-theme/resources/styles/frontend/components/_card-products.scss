@@ -21,9 +21,10 @@
     }
 
     &__name {
-        font-size: 22px;
+        font-size: 18px;
         color: $secondary-color;
         font-weight: normal;
+        line-height: 1.3em;
     }
 
     &__resume {

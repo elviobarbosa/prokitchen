@@ -1,0 +1,39 @@
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+@import './styles/image-prop';
+.wp-block-create-block-header-front {
+	.bd-header {
+		&__container {
+
+			display: grid;
+			grid-template-columns: 80% auto;
+			gap: 20px;
+
+			.video-container {
+				height: 0;
+				padding-bottom: 110%;
+				position: relative;
+				overflow: hidden;
+				border-radius: 12px;
+				transform: translate(-20px, -40px);
+			}
+
+			iframe {
+				width: 100%;
+				position: absolute;
+				transform: translate(-50%, -50%);
+				top: 50%;
+				left: 50%;
+				height: 100%;
+			}
+		}
+
+		&__cover {
+			@include image-proportional(1920, 629)
+		}
+	}
+}
+

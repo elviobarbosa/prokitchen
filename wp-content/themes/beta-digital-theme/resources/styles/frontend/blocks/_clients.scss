@@ -1,0 +1,62 @@
+.clients {
+    @include min-xl {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+   
+    &__title {
+        @include fluid-size(font-size, 18px, 22px);
+    }
+
+    &__item {
+        max-width: 387px;
+
+        &:nth-child(2n) {
+            @include min-xl {
+                margin-top: 40rem;
+            }
+        }
+
+        &:nth-child(2n+1):not(:first-child) {
+            @include min-xl {
+                transform: translateY(-10rem);
+            }
+        }
+
+        @include max-xl {
+            margin-bottom: 6rem;
+        }
+    }
+
+    &__description {
+
+        @include max-xl {
+            font-size: 16px;
+        }
+
+        @include min-xl {
+            font-size: 18px;
+        }
+    }
+
+    &__image-container {
+        @include max-lg {
+            width: 60vw;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }  
+    }
+
+    &__atendidos {
+        .bd-block-page-titles {
+            h2.bd-block-page-titles__title {
+                @include fluid-size(font-size, 20px, 30px);
+            }
+        }
+    }
+
+    &__image {
+        @include image-proportional(400, 300);
+    }
+}

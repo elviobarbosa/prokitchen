@@ -22,10 +22,19 @@
                 <?php
                 $parent_cat_arg = array('hide_empty' => false, 'parent' => 0 );
                 $parent_cat = get_terms('prod-type_category', $parent_cat_arg);
+                $marcas_parent_cat = get_terms('prod_category', $parent_cat_arg);
+
+                foreach ($marcas_parent_cat as $category) {
+                    if ($category->name === 'Marca') {
+                        $marca_category = $category;
+                        break;
+                    }
+                }
+                array_push($parent_cat, $marca_category);
 
                 foreach ($parent_cat as $catVal) :
                     $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
-                    $child_cat = get_terms( 'prod-type_category', $child_arg );
+                    $child_cat = get_terms( $catVal->taxonomy, $child_arg );
                     ?>
                     <optgroup label="<?php echo wp_kses_post($catVal->name) ?>">
                         <?php

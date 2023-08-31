@@ -15,7 +15,6 @@ export default class Tabs {
 
     start(elements) {
         elements.forEach(el => {
-            console.log(el);
             const tabs = el.querySelectorAll('.tablinks');
             const showTab = (ev) => {
                 const { tab } = ev.currentTarget.dataset;

@@ -1,4 +1,5 @@
 .bd-block-product-header {
+    max-width: inherit;
 
     @include max-md {
         display: flex;
@@ -7,12 +8,30 @@
     }
 
     &__description {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
+
+        li {
+            font-size: 1.6rem;
+        }
     }
 
     &__categories {
         strong {
             color: $secondary-color;
         }
+    }
+
+    .description {
+        @include max-xxxl {
+            max-width: 300px;
+        }
+
+        @include min-xxxl {
+            max-width: 450px;
+        }
+    }
+
+    &.wp-block-columns {
+        width: 100%;
     }
 }

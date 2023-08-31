@@ -147,12 +147,12 @@
   // animaçao começando em cima e trazendo para baixo
 @keyframes moveToTop {
     0% {
-      transform: translateY(100px);
+      transform: translateY(0);
       opacity: 0;
     }
   
     100% {
-      transform: translateY(0);
+      transform: translateY(-100px);
       opacity: 1;
     }
 }

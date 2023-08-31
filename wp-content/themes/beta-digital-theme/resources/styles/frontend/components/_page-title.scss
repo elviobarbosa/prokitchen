@@ -9,6 +9,7 @@
     }
 
     &__mobile {
+        background-color: $primary-color;
         @include min-lg {
             display: none;
         }

@@ -1,0 +1,49 @@
+/*!***********************************************************************************************************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js??ruleSet[1].rules[4].use[1]!./node_modules/postcss-loader/dist/cjs.js??ruleSet[1].rules[4].use[2]!./node_modules/sass-loader/dist/cjs.js??ruleSet[1].rules[4].use[3]!./src/block-header-front/editor.scss ***!
+  \***********************************************************************************************************************************************************************************************************************************************************/
+/**
+ * The following styles get applied inside the editor only.
+ *
+ * Replace them with your own styles or remove the file completely.
+ */
+.wp-block-create-block-header-front .bd-header__container {
+  display: grid;
+  grid-template-columns: 80% auto;
+  gap: 20px;
+}
+.wp-block-create-block-header-front .bd-header__container .video-container {
+  height: 0;
+  padding-bottom: 110%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+  transform: translate(-20px, -40px);
+}
+.wp-block-create-block-header-front .bd-header__container iframe {
+  width: 100%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  height: 100%;
+}
+.wp-block-create-block-header-front .bd-header__cover {
+  height: 0;
+  padding-bottom: 32.7604166667%;
+  position: relative;
+}
+.wp-block-create-block-header-front .bd-header__cover figure {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.wp-block-create-block-header-front .bd-header__cover img {
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+}
+
+/*# sourceMappingURL=index.css.map*/

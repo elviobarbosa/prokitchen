@@ -1,0 +1,24 @@
+.page-contato {
+    .contato {
+        &__container {
+            > .wp-block-column:first-child {
+
+                @include max-lg {
+                    display: none;
+                }
+                
+            }
+        }
+
+        &__mapa {
+            max-width: $max-vw;
+            margin: 0 auto;
+            border-radius: 30px;
+            overflow: hidden;
+
+            iframe {
+                width: 100%;
+            }
+        }
+    }
+}
