@@ -1,14 +1,17 @@
 <?php
-/* Template name: Front Page */
 get_header();
-?>
+include 'vendor/autoload.php';
 
-<main id="front-page" <?php post_class('v-line') ?>>
-    <?php the_content() ?>
-</main>
+$parser = new \Smalot\PdfParser\Parser();
+$PDFfile = get_template_directory() . '/garbage/Profile.pdf';
+$PDF = $parser->parseFile($PDFfile);
+$PDFContent = $PDF->getText();
+echo $PDFContent;
+$data = $PDF->getPages()[0]->getDataTm();
+// echo '<pre>';
+// var_dump($data);
+// echo '</pre>';
 
-<?php get_template_part('template-parts/products/category-products') ?>
 
-<?php
 get_footer();
 ?>
