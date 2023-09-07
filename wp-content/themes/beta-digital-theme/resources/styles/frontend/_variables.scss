@@ -4,6 +4,7 @@ $gray-light: #CBCED4;
 $dark: #000;
 $grey: #3d475d;
 $green: #9FFFC8;
+$gray-ultra-light: #f4f4f4;
 
 $theme-colors: (
   "primary-color":$primary-color,
@@ -11,7 +12,8 @@ $theme-colors: (
   "gray-light": $gray-light,
   "dark": $dark,
   "grey": $grey,
-  "green": $green
+  "green": $green,
+  "gray-ultra-light": $gray-ultra-light
 );
 
 $imgpath: "../../images";

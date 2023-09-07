@@ -1,10 +1,15 @@
 .prod-category {
-    border-right: 1px solid $grey;
-    background-color: $primary-color;
+    border-right: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+    background-color: $gray-ultra-light;
     z-index: 10;
 
+    @include min-lg {
+        padding-top: 2rem;
+    }
+
     &__group {
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid #e6e6e6;
         padding: 1rem 2rem;
     }
 
@@ -42,6 +47,7 @@
         font-size: 16px;
         font-weight: normal;
         margin: 0;
+        color: $secondary-color;
     }
 
     &__list {
@@ -63,12 +69,14 @@
 
         a, span {
             font-size: 16px;
+            color: $dark;
         }
 
         a:hover {
             span {
                 @extend %gradient-text;
                 transition: all 0.5s;
+                color: $primary-color;
             }
         }
     }

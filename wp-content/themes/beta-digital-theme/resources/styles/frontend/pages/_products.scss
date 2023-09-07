@@ -1,6 +1,8 @@
 .archive-products {
     &__grid {
         display: grid;
+        max-width: $max-vw;
+        margin: 0 auto;
 
         @include between-breakpoints($screen-md-min, $screen-xxxxl-min) {
             grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -15,12 +17,13 @@
 
     &__container {
         padding-bottom: 10rem;
-        border-bottom: 1px solid $grey;
+        border-bottom: 1px solid #e6e6e6;
     }
 
     &__category-name {
         @include fluid-size(font-size, 24px, 32px);
         font-weight: normal;
+        color: $secondary-color;
     }
 }
 
@@ -32,9 +35,9 @@
 
     h1 {
         width: 95%;
-        margin {
-            left: auto;
-            right: auto;
-        }  
+        color: $primary-color;
+        max-width: $max-vw;
+        margin-left: auto;
+        margin-right: auto;
     }
 }

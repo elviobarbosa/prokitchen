@@ -19,7 +19,7 @@
             width: 6px;
             height: 6px;
             content: '';
-            background-color: white;
+            background-color: $secondary-color;
             position: absolute;
             @include border-radius(50px);
             left: 50%;
@@ -30,7 +30,7 @@
 
     li.slick-active {
         button {
-            border: 1px solid white;
+            border: 1px solid $secondary-color;
         }
     }
 }

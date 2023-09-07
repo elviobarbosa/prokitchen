@@ -1,13 +1,16 @@
 .c-products-related {
     padding: 3rem;
     box-sizing: border-box;
-    background-color: #CBCED4;
+    background-color: #e7e8e9;
     margin-top: 5rem;
 
     &__title {
         @include fluid-size(font-size, 20px, 30px);
         font-weight: normal;
-        margin-top: 0;
         color: $dark;
+        max-width: $max-vw;
+        margin: 0 auto;
+        padding-top: 3rem;
+        padding-bottom: 5rem;
     }
 }

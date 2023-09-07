@@ -1,5 +1,6 @@
 .bd-block-product-header {
-    max-width: inherit;
+    max-width: $max-vw;
+    margin: 0 auto;
 
     @include max-md {
         display: flex;
@@ -12,6 +13,12 @@
 
         li {
             font-size: 1.6rem;
+        }
+    }
+
+    &__column-1 {
+        @include min-lg {
+            padding-right: 6rem;
         }
     }
 

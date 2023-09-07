@@ -24,7 +24,7 @@
         font-size: 1.6rem;
         text-transform: uppercase;
         font-weight: 500;
-        color: $secondary-color;
+        
         display: inline-block;
     }
 
@@ -32,7 +32,7 @@
         @include fluid-size(font-size, 20px, 40px);
         margin-top: 0;
         font-family: $headings;
-        color: $grey;
+        color: $secondary-color;
         max-width: 450px;
     }
 

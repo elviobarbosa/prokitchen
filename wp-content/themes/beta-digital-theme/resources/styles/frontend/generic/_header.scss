@@ -1,12 +1,19 @@
 .header {
-    padding: 0.5rem 2rem;
     width: 100%;
     box-sizing: border-box;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid #e6e6e6;
     z-index: 99;
-    background-color: $primary-color;
+    background-color: white;
+
+    @include max-lg {
+        padding: 0.5rem 2rem;
+    }
+
+    @include min-lg {
+        padding: 2rem;
+    }
 
     &__logo {
         @include fluid-size(width, 150px, 253px);
