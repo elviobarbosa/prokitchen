@@ -593,10 +593,12 @@ figure {
 @media (min-width: 992px) {
   .header {
     padding: 2rem;
+    transition: all 0.5s;
   }
 }
 .header__logo {
   /* stylelint-disable-next-line scss/selector-no-redundant-nesting-selector */
+  transition: all 0.5s;
   z-index: 1;
 }
 .header__logo {
@@ -626,11 +628,13 @@ figure {
   align-items: center;
 }
 
-@media (min-width: 1200px) {
-  .front-page .header {
-    background-color: transparent;
-    border: none;
-  }
+.menu-collapse {
+  padding: 0 1rem;
+  transition: all 0.5s;
+}
+.menu-collapse .header__logo {
+  width: 15rem;
+  transition: all 0.5s;
 }
 
 article {
@@ -1638,11 +1642,12 @@ input[type=submit] {
   align-items: center;
   height: 20px;
 }
-.prod-category__title {
+.prod-category__title a {
   font-size: 16px;
   font-weight: normal;
   margin: 0;
   color: #467EBE;
+  text-decoration: none;
 }
 .prod-category__list {
   overflow: hidden;

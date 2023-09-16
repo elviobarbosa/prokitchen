@@ -32,10 +32,11 @@
         $child_arg = array( 'hide_empty' => false, 'parent' => $catVal->term_id );
         $child_cat = get_terms( $catVal->taxonomy, $child_arg );
         $open = ( str_contains($post_terms, $catVal->term_id) && !is_archive() || str_contains($post_terms, $catVal->term_id) && $is_tax ) ? 'accordeon-opened' : '';
+        $tipo_category = ($catVal->slug == 'marca') ? 'marca/' : 'categoria/';
         ?>
         <div class="prod-category__group accordeon-group <?php echo $open ?>">
             <div class="prod-category__title-container accordeon-control">
-                <h3 class="prod-category__title"><?php echo wp_kses_post($catVal->name) ?></h3>
+                <h3 class="prod-category__title"><a href="<?php echo site_url('produtos-por-' . $tipo_category . $catVal->slug) ?>"><?php echo wp_kses_post($catVal->name) ?></a></h3>
                 <div>
                     <span class="prod-category__plus accordeon-open"><img src="<?php echo IMGPATH?>svg/plus.svg"></span>
                     <span class="prod-category__minus accordeon-close"><img src="<?php echo IMGPATH?>svg/minus.svg"></span>
@@ -45,7 +46,7 @@
             <ul class="prod-category__list accordeon-content">
                 <?php
                 foreach( $child_cat as $child_term ) : 
-                    $selected = (  str_contains($post_terms, $child_term->parent) && !is_archive() || str_contains($post_terms, $child_term->parent) && $is_tax) ? 'prod-category__selected' : '';
+                    $selected = ( str_contains($post_terms, $child_term->parent) && !is_archive() || str_contains($post_terms, $child_term->parent) && $is_tax) ? 'prod-category__selected' : '';
                     ?>
                     <li class="prod-category__item <?php echo $selected ?>">
                         <a
