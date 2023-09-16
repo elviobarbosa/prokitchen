@@ -10,6 +10,7 @@
 		display: flex;
 		align-items: center;
 		font-size: 1.6rem;
+		color: $secondary-color;
 	}
 
 	&__h-bars {
@@ -22,7 +23,7 @@
 		span {
 			@include fluid-size(width, 35px, 35px);
 			@include fluid-size(height, 3px, 4px);
-			background-color: white;
+			background-color: $secondary-color;
 			display: block;
 			transition: all 0.3s ease-out;
 
@@ -42,12 +43,21 @@
 		height: 50px;
 		transform: translateY(-50%);
 		cursor: pointer;
+
+		&:checked ~ .nav__h-menu {
+			color: white;
+		}
+
+		&:checked ~ .nav__h-menu span {
+			background-color: white;
+		}
 		
 		&:checked ~ .nav__h-menu span:first-of-type {
 			margin-right: 0;
 			transition: all 0.3s ease-out;
 			margin-bottom: 0;
 			transform: rotate(45deg);
+			color: white;
 		}
 
 		&:checked ~ .nav__h-menu span:last-of-type {

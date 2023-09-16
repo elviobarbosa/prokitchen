@@ -18,7 +18,7 @@
         &::before {
             content: '';
             position: absolute;
-            background-color: #D800FF;
+            background-color: #34414D;
             width: 30vw;
             height: 300px;
             filter: blur(64px);
@@ -28,7 +28,7 @@
             right: 0;
             transform: translateY(-50%);
             animation: bg-change1 4s infinite;
-            @include bg-change-animation(#D800FF, #009DFF, bg-change1 );
+            @include bg-change-animation(#34414D, #009DFF, bg-change1 );
         }
 
         &::after {
@@ -44,6 +44,11 @@
             transform: translateY(50%);
             animation: bg-change 4s infinite;
             @include bg-change-animation(#009DFF, #00d084, bg-change);
+        }
+
+        .wp-block-image img {
+            width: 100%!important;
+            height: auto!important;
         }
 
         div {

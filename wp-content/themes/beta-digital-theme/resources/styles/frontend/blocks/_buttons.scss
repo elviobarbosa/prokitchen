@@ -7,11 +7,11 @@
         border:none;
         border-top:2px solid $secondary-color;
         border-bottom:2px solid $secondary-color;
-        border-image: linear-gradient(to right, $secondary-color 0%, #4db848 100%);
+        border-image: linear-gradient(to right, $secondary-color 0%, $primary-color 100%);
         border-image-slice: 1;
         position: relative;
         transition:background 0.3s;
-        color: #fff;
+        color: $secondary-color;
         font-size: 16px ;
         cursor: pointer;
         &::before,
@@ -30,7 +30,7 @@
         }
         &::after {
             border-radius: 0 3em 3em 0;
-            border: 2px solid #4db848;
+            border: 2px solid $primary-color;
             position: absolute;
             border-left: none;
             left:auto;
@@ -38,10 +38,12 @@
             top: -2px;
         }
         &:hover {
-            background:rgba(0,0,0,0.3);
+            background:rgba(0,0,0,0);
+            color: $primary-color;
+            transition: all .5s;
             &:after,
             &:before {
-                background:rgba(0,0,0,0.3);
+                background:rgba(0,0,0,0);
             }
         }
 

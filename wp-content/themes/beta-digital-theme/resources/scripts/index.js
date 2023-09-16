@@ -7,6 +7,7 @@ import HeaderFront from './components/text-header-front';
 import ScrollingAnimation from './components/scrolling-animation';
 import InputMasks from './components/input-masks';
 import CF7Events from './components/cf7-events';
+import Scrolling from './components/scrolling';
 
 function domReady(fn) {
     document.addEventListener("DOMContentLoaded", fn);
@@ -20,6 +21,7 @@ function domReady(fn) {
       new ScrollingAnimation();
       new InputMasks();
       new CF7Events();
+      new Scrolling();
     }
 }
 

@@ -31,7 +31,7 @@ $terms = get_terms( array(
         
         <a href="<?php echo $args['guid'] ?>" alt="Veja mais detalhes do produto: <?php echo $args['title'] ?>">
             <div class="c-card-products__resume">
-                <p><?php echo $args['resume'] ?></p>
+                <!-- <p><?php echo $args['resume'] ?></p> -->
             </div>
         </a>
 

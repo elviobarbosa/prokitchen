@@ -1,15 +1,24 @@
 .header {
-    padding: 0.5rem 2rem;
     width: 100%;
     box-sizing: border-box;
     position: sticky;
     top: 0;
-    border-bottom: 1px solid $grey;
+    border-bottom: 1px solid #e6e6e6;
     z-index: 99;
-    background-color: $primary-color;
+    background-color: white;
+
+    @include max-lg {
+        padding: 0.5rem 2rem;
+    }
+
+    @include min-lg {
+        padding: 2rem;
+        transition: all .5s;
+    }
 
     &__logo {
         @include fluid-size(width, 150px, 253px);
+        transition: all .5s;
         z-index: 1;
 
         svg {
@@ -30,11 +39,12 @@
     }
 }
 
-.front-page {
-    .header {
-        @include min-xl {
-            background-color: transparent;
-            border: none;
-        }
+.menu-collapse {
+    padding: 0 1rem;
+    transition: all .5s;
+
+    .header__logo {
+        width: 15rem;
+        transition: all .5s;
     }
 }

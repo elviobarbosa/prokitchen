@@ -22,7 +22,7 @@
 	<?php
 		get_template_part('template-parts/whatsapp-float');
 	?>
-	<header class="header" role="heading" aria-level="1">
+	<header class="header" id="menu-header" role="heading" aria-level="1">
 		<div class="header__container">
 			<div class="header__head">
 				<div class="header__logo">

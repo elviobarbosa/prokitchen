@@ -2,8 +2,8 @@
     position: fixed;
     z-index: 10;
     right: 20px;
-    bottom: 15px;
-    fill: $green;
+    bottom: 35px;
+    fill: $secondary-color;
     
     svg {
         width: 45px;
@@ -11,6 +11,6 @@
     }
 
     a:visited {
-        fill: $green;
+        fill: $secondary-color;
     }
 }
