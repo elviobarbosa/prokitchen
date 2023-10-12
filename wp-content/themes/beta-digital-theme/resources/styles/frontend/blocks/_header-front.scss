@@ -1,16 +1,52 @@
 .bd-block-header-front {
 
-    @include min-xl {
-        
-    }
-
     &__cover {
+        position: relative;
+        overflow: hidden;
+        height: 0;
+
         @include max-lg {
-            @include image-proportional(400, 300);
+            height: 0;
+            padding-bottom: 75%;
+        }
+        @include min-lg {
+            //@include image-proportional(1920, 629);
+            padding-bottom: 32.76%;
+        }
+       
+        figure {
+            @include border-radius(0)
         }
 
-        @include min-lg {
-            @include image-proportional(1920, 629);
+        .wp-block-cb-carousel {
+            margin-bottom: 0;
+            position: absolute;
+            top: 0;
+            height: 100%;
+            width: 100%;
+        }
+
+        .slick-dots {
+            bottom: 10px;
+        }
+
+        img {
+            width: 100vw;
+
+           
+        }
+        .wp-block-cb-slide {
+            padding: 0;
+        }
+
+        .wp-block-cb-slide {
+            // @include max-lg {
+            //     @include image-proportional(400, 300);
+            // }
+
+            // @include min-lg {
+            //     @include image-proportional(1920, 629);
+            // }
         }
     }
 
@@ -74,6 +110,24 @@
                 left: 50%;
                 height: 100%;
             }
+        }
+    }
+
+    .header-slide-desktop {
+        @include max-lg {
+            display: none;
+        }
+        @include min-lg {
+            display: block;
+        }
+    }
+
+    .header-slide-mobile {
+        @include max-lg {
+            display: block;
+        }
+        @include min-lg {
+            display: none;
         }
     }
 }

@@ -18,6 +18,16 @@
 
 </head>
 
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-D478366V8B"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-D478366V8B');
+</script>
+
 <body <?php body_class(); ?>>
 	<?php
 		get_template_part('template-parts/whatsapp-float');
