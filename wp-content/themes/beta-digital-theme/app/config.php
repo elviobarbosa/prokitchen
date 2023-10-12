@@ -53,6 +53,17 @@ function setup() {
 	
 }
 
+function adicionar_categoria_de_padroes_de_bloco() {
+    register_block_pattern_category(
+        'beta-digital',
+        array(
+            'label' => 'Beta Digital',
+        )
+    );
+}
+add_action('init', 'adicionar_categoria_de_padroes_de_bloco');
+
+
 /**
  * Taxonomy dos produtos
  *

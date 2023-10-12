@@ -3,7 +3,7 @@ define("URLTEMA", get_bloginfo("template_url"));
 define("RESOURCES", get_bloginfo("template_url") . "/resources/");
 define("IMGPATH", RESOURCES . "images/");
 define("SVGPATH", IMGPATH . "svg/");
-define("WHATSAPP", '85997947644');
+define("WHATSAPP", '8521807670');
 define("WHATSAPP_TEXT", 'Olá estou com dúvidas e preciso falar com um especialista.');
 
 
